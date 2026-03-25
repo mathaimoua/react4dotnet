@@ -29,3 +29,12 @@ System.IdentityModel.Tokens.Jwt — the library that actually creates and valida
 
 After initializing, we'll need to set up our Person class, we'll put this in a "Models" folder inside the API folder.
 Set up Data\AppDbContext.cs, this is like pool.js, allows the app to talk to the server and our tables.
+
+### Program.cs setup
+We'll edit the default Program.cs to work with auth, JWT in this case.
+
+### Models\User
+Set up the class for handling authentication. We'll use an ID, username, and passwordhash. Don't forget to add the User class to AppDbContext.
+
+
+

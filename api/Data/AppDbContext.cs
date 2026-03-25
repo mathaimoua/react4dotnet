@@ -10,5 +10,6 @@ public class AppDbContext : DbContext
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
     public DbSet<Person> People { get; set; } // DbSet<Person> is how you tell Entity Framework "I have a table of people." When you write _db.People anywhere in your controllers, this is what you're accessing.
-
+    public DbSet<User> Users { get; set; }
+    
 }
