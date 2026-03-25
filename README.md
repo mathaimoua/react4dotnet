@@ -26,3 +26,6 @@ Npgsql — lets .NET talk to Postgres
 EntityFrameworkCore.Design — Entity Framework tools for managing the database
 JwtBearer — middleware that automatically checks incoming requests for a valid JWT token
 System.IdentityModel.Tokens.Jwt — the library that actually creates and validates JWT tokens
+
+After initializing, we'll need to set up our Person class, we'll put this in a "Models" folder inside the API folder.
+Set up Data\AppDbContext.cs, this is like pool.js, allows the app to talk to the server and our tables.
