@@ -1,6 +1,0 @@
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Database=react4dotnet;Username=postgres;Password=postgres"
-  },
-  "ApiKey": "dev-secret-key-123"
-}

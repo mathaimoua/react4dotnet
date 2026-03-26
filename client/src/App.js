@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
-const API = 'http://localhost:5164/api/person';
+const API = 'http://localhost:5151/api/person';
+const API_KEY = 'dev-secret-key-123';
 
 function App() {
   const [people, setPeople] = useState([]); //store our list of people
@@ -11,7 +12,11 @@ function App() {
 
   // Method to 
   const fetchPeople = async () => {
-    const res = await fetch(API);
+    const res = await fetch(API, {
+      headers: {
+        'x-api-key': API_KEY
+      }
+    });
     const data = await res.json();
     setPeople(data);
   };
@@ -29,15 +34,15 @@ function App() {
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          {people.map(p => (
-            <tr key={p.id}>
-              <td>{p.first_name} {p.last_name}</td>
-              <td>{p.email}</td>
-              <td>{p.phone}</td>
-            </tr>
-          ))}
-        </tbody>
+          <tbody>
+            {people.map(p => (
+              <tr key={p.id}>
+                <td>{p.first_name} {p.last_name}</td>
+                <td>{p.email}</td>
+                <td>{p.phone}</td>
+              </tr>
+            ))}
+          </tbody>
       </table>
     </div>
   );

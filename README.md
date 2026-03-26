@@ -36,5 +36,7 @@ We'll edit the default Program.cs to work with auth, JWT in this case.
 ### Models\User
 Set up the class for handling authentication. We'll use an ID, username, and passwordhash. Don't forget to add the User class to AppDbContext.
 
+### Middleware\APIKeyMiddleware
+This acts as the bouncer to the door, we can intercept requests from multiple points to verify API keys and access.
 
 
